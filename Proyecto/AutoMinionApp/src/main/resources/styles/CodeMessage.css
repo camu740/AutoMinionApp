@@ -1,0 +1,19 @@
+.background { -fx-background-color: #21414A;
+-fx-background-color: radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-color: -webkit-radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-color: -moz-radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-radius: 20.0;
+-fx-border-radius: 18.0;}
+
+
+.button { -fx-background-color: #969696;
+         -fx-border-color: #000000;
+         -fx-border-width: 2.0;
+         -fx-font-family: "Arial";
+         -fx-font-size: 14.0px;
+         -fx-background-radius: 20.0;
+         -fx-border-radius: 18.0;
+		 -fx-text-fill: #000000;
+}
+
+

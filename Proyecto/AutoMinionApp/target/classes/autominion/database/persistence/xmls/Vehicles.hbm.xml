@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Vehicles" table="vehicles" catalog="autominionbbdd" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="concessionaires" class="Concessionaires" fetch="select">
+            <column name="concessionaireId" />
+        </many-to-one>
+        <many-to-one name="customers" class="Customers" fetch="select">
+            <column name="customerId" />
+        </many-to-one>
+        <property name="vehicleType" type="string">
+            <column name="vehicleType" length="20" not-null="true" />
+        </property>
+        <property name="brand" type="string">
+            <column name="brand" length="45" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" length="50" />
+        </property>
+        <property name="registration" type="string">
+            <column name="registration" length="9" unique="true" />
+        </property>
+        <property name="color" type="string">
+            <column name="color" length="20" />
+        </property>
+        <property name="fabricationYear" type="java.lang.Integer">
+            <column name="fabricationYear" />
+        </property>
+        <property name="km" type="big_decimal">
+            <column name="km" precision="16" />
+        </property>
+        <property name="numberDoor" type="java.lang.Integer">
+            <column name="numberDoor" />
+        </property>
+        <property name="numberSeat" type="java.lang.Integer">
+            <column name="numberSeat" />
+        </property>
+        <property name="combustion" type="string">
+            <column name="combustion" length="20" />
+        </property>
+        <property name="drivingType" type="string">
+            <column name="drivingType" length="20" />
+        </property>
+        <property name="entryDate" type="date">
+            <column name="entry_date" length="10" />
+        </property>
+        <set name="salesproposals" table="salesproposal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicleId" not-null="true" />
+            </key>
+            <one-to-many class="Salesproposal" />
+        </set>
+        <set name="repairses" table="repairs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicleToRepair" not-null="true" />
+            </key>
+            <one-to-many class="Repairs" />
+        </set>
+    </class>
+</hibernate-mapping>

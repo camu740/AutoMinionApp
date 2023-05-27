@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Speciality" table="speciality" catalog="autominionbbdd" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="30" unique="true" />
+        </property>
+        <set name="mechanicses" table="mechanicspeciality" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="SpecialityId" not-null="true" />
+            </key>
+            <many-to-many entity-name="Mechanics">
+                <column name="MechanicId" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Salesemployees" table="salesemployees" catalog="autominionbbdd" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="foreign">
+                <param name="property">employees</param>
+            </generator>
+        </id>
+        <one-to-one name="employees" class="Employees" constrained="true"></one-to-one>
+        <set name="salesproposals" table="salesproposal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="salesEmployeeId" not-null="true" />
+            </key>
+            <one-to-many class="Salesproposal" />
+        </set>
+    </class>
+</hibernate-mapping>

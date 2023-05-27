@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>2DAM-DESIN-IESPabloPicasso</groupId>
+	<artifactId>AutoMinionApp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>AutoMinion S.L.</name>
+
+	<developers>
+		<developer>
+			<id>acamu</id>
+			<name>Adrián Cámara Muñoz</name>
+			<email>a_adrian.camara.munoz@iespablopicasso.es</email>
+			<organization>IES Pablo Picasso</organization>
+			<roles>
+				<role>Estudiante</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>adiav</id>
+			<name>Angel Díaz Avilés</name>
+			<email>a_angel.diaz.aviles@iespablopicasso.es</email>
+			<organization>IES Pablo Picasso</organization>
+			<roles>
+				<role>Estudiante</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.9</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.5.3.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>2.0.1.Final</version>
+		</dependency>
+
+	</dependencies>
+</project>

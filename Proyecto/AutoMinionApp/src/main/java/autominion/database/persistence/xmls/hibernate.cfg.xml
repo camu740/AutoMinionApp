@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">123</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/concesionario?serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">huser</property>
+        <property name="hibernate.default_schema">concesionario</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping class="Speciality" />
+        <mapping class="Customers" />
+        <mapping class="Repairs" />
+        <mapping class="Director" />
+        <mapping class="Mechanics" />
+        <mapping class="Salesemployees" />
+        <mapping class="Employees" />
+        <mapping class="Concessionaires" />
+        <mapping class="Salesproposal" />
+        <mapping class="Vehicles" />
+    </session-factory>
+</hibernate-configuration>

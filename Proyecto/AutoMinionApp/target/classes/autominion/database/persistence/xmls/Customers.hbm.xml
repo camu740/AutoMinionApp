@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Customers" table="customers" catalog="autominionbbdd" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="20" />
+        </property>
+        <property name="surname1" type="string">
+            <column name="surname1" length="20" />
+        </property>
+        <property name="surname2" type="string">
+            <column name="surname2" length="20" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="profileImage" type="string">
+            <column name="profileImage" length="65535" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="50" />
+        </property>
+        <set name="vehicleses" table="vehicles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerId" />
+            </key>
+            <one-to-many class="Vehicles" />
+        </set>
+        <set name="salesproposals" table="salesproposal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerId" not-null="true" />
+            </key>
+            <one-to-many class="Salesproposal" />
+        </set>
+        <set name="repairses" table="repairs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerId" />
+            </key>
+            <one-to-many class="Repairs" />
+        </set>
+    </class>
+</hibernate-mapping>

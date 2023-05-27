@@ -1,0 +1,21 @@
+.menu-bar {
+	-fx-background-color: #092D36;
+}
+
+.menu-bar .label {
+	-fx-font-size: 10pt;
+	-fx-font-family: "Segoe UI Light";
+	-fx-text-fill: white;
+	-fx-opacity: 0.9;
+}
+
+.menu-bar .menu {
+    -fx-padding: 5 22 5 22;   
+    -fx-background-color: #092D36;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 10pt;
+}
+
+.menu-bar .menu.hover {
+    -fx-background-color: #3a3a3a;
+}

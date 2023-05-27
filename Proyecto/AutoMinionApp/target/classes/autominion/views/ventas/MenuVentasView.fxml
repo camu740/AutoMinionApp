@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../../../../../target/resources/styles/MenuVentas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autominion.views.ventas.MenuVentasController">
+   <top>
+      <MenuBar fx:id="MenuBar" stylesheets="@../../../../resources/styles/MenuVentas.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="VehiclesLabel" mnemonicParsing="false" text="Vehiculos">
+               <items>
+                  <MenuItem fx:id="itemVehiculos" mnemonicParsing="false" onAction="#handleVehiculos" style="-fx-text-fill: #092d36;" text="Vehículos" />
+                  <MenuItem fx:id="itemVehiculosAntiguos" mnemonicParsing="false" onAction="#handleVehiculosAntiguos" style="-fx-text-fill: #092d36;" text="Vehículos Antigüedad " />
+                  <MenuItem fx:id="itemNuevoVehiculo" mnemonicParsing="false" onAction="#handleNewVehiculo" style="-fx-text-fill: #092d36;" text="Nuevo Vehículo" />
+               </items></Menu>
+          <Menu fx:id="CustomerLabel" mnemonicParsing="false" text="Clientes">
+               <items>
+                  <MenuItem fx:id="itemClientes" mnemonicParsing="false" onAction="#handleClientes" style="-fx-text-fill: #092d36;" text="Clientes" />
+                  <MenuItem fx:id="itemNuevoCliente" mnemonicParsing="false" onAction="#handleNewCliente" style="-fx-text-fill: #092d36;" text="Nuevo Cliente" />
+               </items></Menu>
+          <Menu fx:id="SalesLabel" mnemonicParsing="false" text="Ventas">
+               <items>
+                  <MenuItem fx:id="itemVentas" mnemonicParsing="false" onAction="#handleVentas" style="-fx-text-fill: #000000;" text="Ventas" />
+                  <MenuItem fx:id="itemNewVenta" mnemonicParsing="false" onAction="#handleNewVenta" style="-fx-text-fill: #000000;" text="Nueva Venta" />
+               </items></Menu>
+            <Menu fx:id="ProposalLabel" mnemonicParsing="false" text="Propuestas">
+               <items>
+                  <MenuItem fx:id="itemVentas" mnemonicParsing="false" onAction="#handlePropuestas" style="-fx-text-fill: #092d36;" text="Propuestas" />
+                  <MenuItem fx:id="itemNewPropuesta" mnemonicParsing="false" onAction="#handleNewPropuesta" style="-fx-text-fill: #092d36;" text="Nueva propuesta" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

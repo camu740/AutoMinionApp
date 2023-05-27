@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Mechanics" table="mechanics" catalog="autominionbbdd" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="foreign">
+                <param name="property">employees</param>
+            </generator>
+        </id>
+        <one-to-one name="employees" class="Employees" constrained="true"></one-to-one>
+        <many-to-one name="mechanics" class="Mechanics" fetch="select">
+            <column name="bossId" />
+        </many-to-one>
+        <set name="specialities" table="mechanicspeciality" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="MechanicId" not-null="true" />
+            </key>
+            <many-to-many entity-name="Speciality">
+                <column name="SpecialityId" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="mechanicses" table="mechanics" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bossId" />
+            </key>
+            <one-to-many class="Mechanics" />
+        </set>
+        <set name="repairses" table="repairs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mechanicId" not-null="true" />
+            </key>
+            <one-to-many class="Repairs" />
+        </set>
+    </class>
+</hibernate-mapping>

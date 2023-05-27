@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@../../../../../../target/resources/styles/Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autominion.views.login.LoginViewController">
+   <children>
+      <Label fx:id="lblTittle" layoutX="68.0" layoutY="56.0" stylesheets="@../../../../../../target/resources/styles/Login.css" text="Login">
+         <font>
+            <Font name="Arial Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmail" layoutX="79.0" layoutY="239.0" text="Email">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUser" layoutX="79.0" layoutY="182.0" text="User">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="79.0" layoutY="418.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="189.0" stylesheets="@../../../../resources/styles/Login.css" text="Anterior" />
+      <Button fx:id="btnNext" layoutX="296.0" layoutY="418.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="189.0" stylesheets="@../../../../resources/styles/Login.css" text="Siguiente" />
+      <TextField fx:id="txtUser" layoutX="71.0" layoutY="216.0" prefHeight="36.0" prefWidth="400.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="71.0" layoutY="278.0" prefHeight="36.0" prefWidth="400.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblPassword" layoutX="79.0" layoutY="287.0" text="Password">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPasswd" layoutX="71.0" layoutY="321.0" prefHeight="34.0" prefWidth="400.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnSign" layoutX="87.0" layoutY="441.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="369.0" rotate="-0.0" stylesheets="@../../../../resources/styles/Login.css" text="Sign in" />
+      <ImageView id="image" fx:id="image" fitHeight="300.0" fitWidth="400.0" layoutX="530.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+         <image>
+            <Image url="@../../../../../target/resources/images/rent.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDescription" layoutX="71.0" layoutY="140.0" prefHeight="48.0" prefWidth="432.0" text="Introduce el correo para enviarte el código y cambiar la contraseña">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnForgot" layoutX="202.0" layoutY="363.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="132.0" styleClass="buttonForgot" text="Forgot Password" textFill="#6b6b6b">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

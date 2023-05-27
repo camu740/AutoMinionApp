@@ -1,0 +1,34 @@
+.background { -fx-background-color: #daf8ff;
+-fx-background-color: radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-color: -webkit-radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-color: -moz-radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+}
+
+
+.button { -fx-background-color: #092d36;
+         -fx-border-color: #000000;
+         -fx-border-width: 2.0;
+         -fx-text-fill: #FFFFFF;
+         -fx-font-family: "Arial";
+         -fx-font-size: 24.0px;
+         -fx-background-radius: 18.0;
+         -fx-border-radius: 18.0;
+}
+
+.buttonForgot {
+		-fx-background-color: #daf8ff;
+		-fx-border-color: #daf8ff;
+        -fx-text-fill: #000000;
+        -fx-font-family: "Arial";
+		-fx-font-size: 14.0px;
+		-fx-text-fill: #6b6b6b;
+        
+}
+
+.image {
+-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.8), 10.0, 0.0, 0.0, 0.0);
+-fx-padding: 10.0;
+-fx-background-color: firebrick;
+-fx-background-radius: 5.0;
+
+}

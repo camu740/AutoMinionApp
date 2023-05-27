@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Concessionaires" table="concessionaires" catalog="autominionbbdd" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="30" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="50" />
+        </property>
+        <property name="cp" type="java.lang.Integer">
+            <column name="CP" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="50" />
+        </property>
+        <set name="employeeses" table="employees" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="concessionaireId" />
+            </key>
+            <one-to-many class="Employees" />
+        </set>
+        <set name="vehicleses" table="vehicles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="concessionaireId" />
+            </key>
+            <one-to-many class="Vehicles" />
+        </set>
+    </class>
+</hibernate-mapping>

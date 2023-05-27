@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Salesproposal" table="salesproposal" catalog="autominionbbdd" optimistic-lock="version">
+        <composite-id name="id" class="SalesproposalId">
+            <key-property name="salesEmployeeId" type="long">
+                <column name="salesEmployeeId" />
+            </key-property>
+            <key-property name="customerId" type="long">
+                <column name="customerId" />
+            </key-property>
+            <key-property name="vehicleId" type="long">
+                <column name="vehicleId" />
+            </key-property>
+            <key-property name="proposalDate" type="date">
+                <column name="proposal_date" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="customers" class="Customers" update="false" insert="false" fetch="select">
+            <column name="customerId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="salesemployees" class="Salesemployees" update="false" insert="false" fetch="select">
+            <column name="salesEmployeeId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="vehicles" class="Vehicles" update="false" insert="false" fetch="select">
+            <column name="vehicleId" not-null="true" />
+        </many-to-one>
+        <property name="proposalPrice" type="big_decimal">
+            <column name="proposalPrice" precision="16" />
+        </property>
+        <property name="sold" type="java.lang.Boolean">
+            <column name="sold" />
+        </property>
+        <property name="soldDate" type="date">
+            <column name="sold_date" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

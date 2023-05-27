@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+.background{
+	-fx-background-color: #092d36;
+}
+
+.text{
+	-fx-color: #ffffff;
+}

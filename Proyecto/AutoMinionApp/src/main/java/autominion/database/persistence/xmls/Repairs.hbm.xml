@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 feb 2023 9:48:16 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="Repairs" table="repairs" catalog="autominionbbdd" optimistic-lock="version">
+        <composite-id name="id" class="RepairsId">
+            <key-property name="mechanicId" type="long">
+                <column name="mechanicId" />
+            </key-property>
+            <key-property name="vehicleToRepair" type="long">
+                <column name="vehicleToRepair" />
+            </key-property>
+            <key-property name="requestDate" type="date">
+                <column name="request_date" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="customers" class="Customers" fetch="select">
+            <column name="customerId" />
+        </many-to-one>
+        <many-to-one name="mechanics" class="Mechanics" update="false" insert="false" fetch="select">
+            <column name="mechanicId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="vehicles" class="Vehicles" update="false" insert="false" fetch="select">
+            <column name="vehicleToRepair" not-null="true" />
+        </many-to-one>
+        <property name="estimatedBudget" type="big_decimal">
+            <column name="estimatedBudget" precision="16" />
+        </property>
+        <property name="estimatedTime" type="big_decimal">
+            <column name="estimatedTime" precision="16" />
+        </property>
+        <property name="details" type="string">
+            <column name="Details" length="65535" />
+        </property>
+        <property name="priority" type="string">
+            <column name="Priority" length="20" />
+        </property>
+        <property name="partsList" type="string">
+            <column name="partsList" length="65535" />
+        </property>
+        <property name="finalizeDate" type="date">
+            <column name="finalize_date" length="10" />
+        </property>
+        <property name="finalize" type="java.lang.Boolean">
+            <column name="finalize" />
+        </property>
+    </class>
+</hibernate-mapping>

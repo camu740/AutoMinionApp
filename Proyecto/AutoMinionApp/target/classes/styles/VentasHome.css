@@ -1,0 +1,5 @@
+.background { -fx-background-color: #daf8ff;
+-fx-background-color: radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-color: -webkit-radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+-fx-background-color: -moz-radial-gradient(circle farthest-corner at center center, #daf8ff 40.0%, #ffffff 100.0%);
+}
